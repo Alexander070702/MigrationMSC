@@ -35,11 +35,11 @@
 
     let svg = d3.select('#flowConservationSVG');
     if (svg.empty()) {
-      // Attempt to create the container on the fly if it does not exist
       let container = d3.select('#flowConservationContainer');
       if (container.empty()) {
+        const before = d3.select('h2.section-title').empty() ? null : 'h2.section-title';
         container = d3.select('body')
-          .append('div')
+          .insert('div', before)
           .attr('id', 'flowConservationContainer')
           .style('max-width', '700px')
           .style('margin', '20px auto');
