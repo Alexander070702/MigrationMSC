@@ -35,6 +35,7 @@
 
     let svg = d3.select('#flowConservationSVG');
     if (svg.empty()) {
+
       let container = d3.select('#flowConservationContainer');
       if (container.empty()) {
         const before = d3.select('h2.section-title').empty() ? null : 'h2.section-title';
@@ -43,6 +44,7 @@
           .attr('id', 'flowConservationContainer')
           .style('max-width', '700px')
           .style('margin', '20px auto');
+
       }
       svg = container.append('svg')
         .attr('id', 'flowConservationSVG')
