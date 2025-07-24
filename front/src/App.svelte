@@ -1313,16 +1313,18 @@ The figure contrasts the behavior of a standard single-path reinforcement learne
 
   <p class="section-text">
     To better understand the core concepts used by GFlowNets, let’s consider a
-    simplified version of the Tetris game. In traditional Tetris, players remove
-    filled lines to survive as long as possible. Here we ignore line clears so
-    the goal becomes filling the entire grid.
+    simplified version of Tetris. Players control falling pieces known as
+    <em>tetrominoes</em> and try to orient and stack them to fill rows in a grid.
+    In classic Tetris, any completed line disappears, but in this demo we ignore
+    line clears so the aim is simply to fill the entire board as densely as
+    possible.
   </p>
   <p class="section-text">
-    GFlowNets sample trajectories iteratively by moving from one state to the
-    next via available actions. All state–action possibilities form a directed
-    acyclic graph (DAG) representing every way the game could unfold. Because the
-    action space is huge, we use this simplified Tetris setting to illustrate the
-    idea.
+    Sampling in a GFlowNet proceeds step by step, moving from one state to the
+    next via available actions. The collection of all states and actions forms a
+    directed acyclic graph (DAG) with many potential paths. Because enumerating
+    a full DAG is typically infeasible, we illustrate the idea with this
+    simplified Tetris setup.
   </p>
 
   <ul class="section-text">
