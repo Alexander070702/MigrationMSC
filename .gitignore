@@ -1,5 +1,6 @@
 jupyter/
 .ipynb_checkpoints/
+front/node_modules/
 old/
 venv/
 python/testing.py
